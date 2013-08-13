@@ -15,6 +15,7 @@ class StudentsController < ApplicationController
     @student = Student.new(params[:student])
 
     if @student.save
+      House.sorting_hat!(@student)
       redirect_to student_path(@student)
     else
       flash[:error] = "Please correct the errors below."
