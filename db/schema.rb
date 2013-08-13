@@ -13,18 +13,13 @@
 
 ActiveRecord::Schema.define(:version => 20130710032742) do
 
-  create_table "house", :force => true do |t|
-    t.string  "name"
-    t.integer "students_id"
-  end
-
   create_table "houses", :force => true do |t|
-    t.string  "name"
-    t.integer "students_id"
+    t.string "name"
   end
 
   create_table "students", :force => true do |t|
-    t.string "name"
+    t.string  "name"
+    t.integer "house_id"
   end
 
 end
