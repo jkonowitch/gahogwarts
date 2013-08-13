@@ -1,3 +1,5 @@
 class Houses < ActiveRecord
-  attr_accessor :house_name
+  attr_accessible :name
+
+  has_many :students
 end
