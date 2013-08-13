@@ -1,1 +1,2 @@
 <h1><%= @student.name %></h1>
+<h3>Congrats, you are in <%= link_to(@student.house.name, house_path(@student.house)) %>!</h3>
