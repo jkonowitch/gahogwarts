@@ -18,6 +18,11 @@ ActiveRecord::Schema.define(:version => 20130710032742) do
     t.integer "students_id"
   end
 
+  create_table "houses", :force => true do |t|
+    t.string  "name"
+    t.integer "students_id"
+  end
+
   create_table "students", :force => true do |t|
     t.string "name"
   end
